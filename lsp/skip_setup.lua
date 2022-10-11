@@ -1,4 +1,4 @@
 return {
-    -- "dartls",
-    -- "rust_analyzer"
+    "dartls",
+    "rust_analyzer"
 }
