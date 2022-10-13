@@ -9,14 +9,18 @@ return {
         after = "mason-lspconfig.nvim",
         requires = { "plenary.nvim" },
         config = function()
-            require("flutter-tools").setup(require "flutter-tools")
+            require("flutter-tools").setup(require "user.plugins.flutter-tools")
         end,
     },
 
+    -- Rust Tools
     ["simrat39/rust-tools.nvim"] = {
         after = "mason-lspconfig.nvim", -- make sure to load after mason-lspconfig
         config = function()
-            require("rust-tools").setup(require "rust-tools")
+            --  require("rust-tools").setup(require "user.plugins.rust-tools")
+            require("rust-tools").setup {
+                server = astronvim.lsp.server_settings "rust_analyzer",
+            }
         end,
     },
 }
