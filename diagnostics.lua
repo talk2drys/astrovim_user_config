@@ -1,4 +1,4 @@
 return {
-    virtual_text = true,
+    virtual_text = false,
     underline = true,
 }

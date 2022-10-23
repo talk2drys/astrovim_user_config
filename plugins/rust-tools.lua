@@ -8,13 +8,21 @@ return {
             auto = true,
             only_current_line = false,
             show_parameter_hints = true,
-            parameter_hints_prefix = "<- ",
-            other_hints_prefix = "=> ",
+            parameter_hints_prefix = ": ",
+            other_hints_prefix = "→ ",
             max_len_align = true,
             max_len_align_padding = 1,
-            right_align = true,
+            right_align = false,
             right_align_padding = 7,
             highlight = "Comment",
+        }
+    },
+    -- debugging stuff
+    dap = {
+        adapter = {
+        type = "executable",
+        command = "lldb-vscode",
+        name = "rt_lldb",
         },
     }
 }
